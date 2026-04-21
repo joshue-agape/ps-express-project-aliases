@@ -131,9 +131,13 @@ function Express-Mailer {
     Write-Host "Installing email dependencies..."
     npm install nodemailer ejs
 
-    if (-not (Test-Path "app/templates")) {
-        New-Item -ItemType Directory -Path "app/templates" -Force | Out-Null
-    }
+    $dirs = @(
+        "app/services",
+        "app/controllers",
+        "app/routes/groups",
+        "app/templates"
+    )
+    foreach ($d in $dirs) { if (-not (Test-Path $d)) { New-Item -ItemType Directory -Path $d -Force | Out-Null } }
 
     Set-Content "app/services/email.service.js" -Value $express_project_email_service_content -Encoding UTF8
     Set-Content "app/templates/example.ejs" -Value $express_project_example_template_content -Encoding UTF8
