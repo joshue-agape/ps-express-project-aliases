@@ -9,6 +9,7 @@ $express_project_sequelizerc = @"
     };
 "@
 
+
 function express_project_config_database_content {
     param([Parameter(Mandatory = $true)][string]$DB_DIALECT)
     return @"
@@ -35,6 +36,7 @@ function express_project_config_database_content {
         module.exports = sequelize;
 "@
 }
+
 
 function express_project_sequelize_cli_content {
     param([Parameter(Mandatory = $true)][string]$DB_DIALECT)
@@ -161,6 +163,7 @@ npx sequelize-cli seed:generate --name user_seeder
 ```
 '@
 
+
 function Express-Database {
     if (-Not (Test-Path "package.json")) {
         Write-Host "package.json not found. Please run this command inside a Node.js project."
@@ -251,6 +254,7 @@ function Express-Database {
                 Add-Content -Path $file -Value "$key=$($db_vars[$key])"
             }
         }
+        Add-Content -Path $file -Value "`n"
     }
 
     Write-Host "Formatting project code..."
