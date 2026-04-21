@@ -247,3 +247,8 @@ function Express-Multer {
     Write-Host "File upload service is ready (images & documents)."
     Write-Host "Use /api/v1/multer/image/update to upload files."
 }
+
+
+function Setup-Express-Multer {
+    Express-Multer
+}

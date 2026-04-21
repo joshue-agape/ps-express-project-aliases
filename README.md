@@ -83,6 +83,71 @@ Reload your profile
 Your aliases are now active 🎉  
 You can start using them immediately to speed up your workflow.  
 
+### ⚙️ CLI Commands
+
+🚀 To Create a New Project  
+Scaffold a new Express project in seconds using one of the following commands:  
+
+```bash
+New-Express project_name
+```
+
+```bash
+Create-Express project_name
+```
+
+```bash
+New-Express-Project project_name
+```
+
+```bash
+Create-Express-Project project_name
+```
+
+🗄️ To Setup Database  
+Initialize and configure the database for your Express application:  
+
+```bash
+Express-Database
+```
+
+```bash
+Setup-Express-Database
+```
+
+📧 To Setup Mailer  
+Enable and configure email services:  
+
+```bash
+Express-Mailer
+```
+
+```bash
+Setup-Express-Mail
+```
+
+📦 To Setup Multer  
+Configure file upload handling with Multer:  
+
+```bash
+Express-Multer
+```
+
+```bash
+Setup-Express-Multer
+```
+
+🔐 To Setup Authentication  
+Set up authentication for your Express application:  
+
+```bash
+Express-Auth
+```
+
+```bash
+Setup-Express-Auth
+```
+
 💡 Tips  
 Restart PowerShell if changes don’t apply  
 Double-check file paths if aliases aren’t working  

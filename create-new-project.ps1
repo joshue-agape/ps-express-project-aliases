@@ -401,7 +401,7 @@ function New-Express {
     npm run start
 }
 
-function New-Express-project {
+function New-Express-Project {
     param(
         [string]$PROJECT_NAME
     )
@@ -409,7 +409,7 @@ function New-Express-project {
     New-Express $PROJECT_NAME
 }
 
-function Create-express {
+function Create-Express {
     param(
         [string]$PROJECT_NAME
     )
@@ -417,7 +417,7 @@ function Create-express {
     New-Express $PROJECT_NAME
 }
 
-function Create-express-project {
+function Create-Express-Project {
     param(
         [string]$PROJECT_NAME
     )

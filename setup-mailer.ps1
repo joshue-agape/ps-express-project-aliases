@@ -176,3 +176,8 @@ function Express-Mailer {
     Write-Host "SMTP configuration has been added to your .env files."
     Write-Host "You can now use EmailService to send emails."
 }
+
+
+function Setup-Express-Mail {
+    Express-Mailer
+}

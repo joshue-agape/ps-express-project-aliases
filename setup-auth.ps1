@@ -133,3 +133,8 @@ function Express-Auth {
     Write-Host "JWT service and auth middleware are ready to use."
     Write-Host "Protect your routes using authMiddleware."
 }
+
+
+function Setup-Express-Auth {
+    Express-Auth
+}

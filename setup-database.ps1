@@ -266,3 +266,8 @@ function Express-Database {
     Write-Host "Configuration files generated and environment variables initialized."
     Write-Host "You can now run: npm run db:migrate"
 }
+
+
+function Setup-Express-Database {
+    Express-Database
+}
