@@ -1,0 +1,1 @@
+. "$HOME\.config\alias\express-project-cli\create-new-project.ps1"
