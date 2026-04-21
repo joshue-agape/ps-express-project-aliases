@@ -280,6 +280,7 @@ HOST=localhost
 PROTOCOL=http
 
 SESSION_SECRET=your-super-secret
+
 '@
 
 
@@ -346,18 +347,15 @@ function New-Express {
     Write-Host "Installing nodemon"
     npm install --save-dev nodemon eslint
 
-    $PRETTIE = Read-Host "Would you like to install Prettier? (Y/N)"
-    if ($PRETTIE.Trim() -match '^[Yy]') {
-        Write-Host "Installing Prettier..."
-        npm install --save-dev prettier
-        npm pkg set scripts.format="prettier --write ." | Out-Null
+    Write-Host "Installing Prettier..."
+    npm install --save-dev prettier
+    npm pkg set scripts.format="prettier --write ." | Out-Null
 
-        Set-Content "prettier.config.js" -Value $express_project_prettier_content -Encoding UTF8
-        Set-Content ".prettierignore" -Value $express_project_prettier_ignore_content -Encoding UTF8
+    Set-Content "prettier.config.js" -Value $express_project_prettier_content -Encoding UTF8
+    Set-Content ".prettierignore" -Value $express_project_prettier_ignore_content -Encoding UTF8
 
-        Write-Host "- Prettier has been successfully installed and configured!"
-        Write-Host "- Run `npm run format` to format your project."
-    }
+    Write-Host "- Prettier has been successfully installed and configured!"
+    Write-Host "- Run `npm run format` to format your project."
 
     $dirs = @(
         "app/docs",
@@ -389,9 +387,8 @@ function New-Express {
     npm pkg set scripts.start="nodemon main.js"
     npm pkg set scripts.build="node main.js"
 
-    if ($PRETTIE.Trim() -match '^[Yy]') {
-        npm run format
-    }
+    Write-Host "Formatting project code..."
+    npm run format
 
     $GIT = Read-Host "Would you like to initialize Git? (Y/N)"
     if ($GIT.Trim() -match '^[Yy]') {
